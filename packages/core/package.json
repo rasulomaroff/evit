@@ -1,0 +1,42 @@
+{
+    "name": "@evit/core",
+    "version": "0.1.0",
+    "type": "module",
+    "description": "A lightweight, type-safe, stateless event system for building reactive UIs.",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "node": "./dist/index.cjs",
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "spec": "vitest run --typecheck",
+        "build": "tsup src/index.ts --format esm,cjs --dts --minify --clean --sourcemap"
+    },
+    "keywords": [
+        "event",
+        "emitter",
+        "react",
+        "hook",
+        "listener",
+        "subscription"
+    ],
+    "author": "rasulomaroff",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rasulomaroff/evit.git"
+    },
+    "bugs": {
+        "url": "https://github.com/rasulomaroff/evit/issues"
+    },
+    "homepage": "https://rasulomaroff.github.io/evit/",
+    "publishConfig": {
+        "access": "public"
+    }
+}

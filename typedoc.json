@@ -1,0 +1,14 @@
+{
+    "entryPoints": [
+        "packages/*"
+    ],
+    "name": "Packages Example",
+    "entryPointStrategy": "packages",
+    "includeVersion": false,
+    "packageOptions": {
+        "includeVersion": true,
+        "entryPoints": [
+            "src/index.ts"
+        ]
+    }
+}

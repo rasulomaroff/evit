@@ -1,0 +1,48 @@
+{
+  "name": "evit",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "spec": "vitest run",
+    "doc": "typedoc",
+    "lint:check": "eslint .",
+    "type:check": "tsc --build ./tsconfig.typecheck.json --noEmit"
+  },
+  "description": "A lightweight, type-safe, and stateless event system for building reactive UIs. Designed to enable feature-level communication in large-scale applications using frameworks like React.",
+  "keywords": [
+    "event",
+    "emitter",
+    "react",
+    "hook",
+    "listener",
+    "subscription"
+  ],
+  "author": "rasulomaroff",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rasulomaroff/evit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rasulomaroff/evit/issues"
+  },
+  "homepage": "https://rasulomaroff.github.io/evit/",
+  "packageManager": "pnpm@10.12.1",
+  "devDependencies": {
+    "@eslint/js": "^9.29.0",
+    "eslint": "^9.29.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.5.0",
+    "globals": "^16.2.0",
+    "happy-dom": "^18.0.1",
+    "jiti": "^2.4.2",
+    "prettier": "^3.6.0",
+    "tsup": "^8.5.0",
+    "typedoc": "^0.28.5",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.35.0",
+    "vitest": "^3.2.4"
+  }
+}
