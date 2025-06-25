@@ -2,7 +2,7 @@
     "entryPoints": [
         "packages/*"
     ],
-    "name": "Packages Example",
+    "name": "Evit packages documentation",
     "entryPointStrategy": "packages",
     "includeVersion": false,
     "packageOptions": {
