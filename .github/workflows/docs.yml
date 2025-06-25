@@ -25,6 +25,8 @@ jobs:
           cache: 'pnpm'
       - name: Install dependencies
         run: pnpm install
+      - name: Build libs
+        run: pnpm build:all
       - name: Build docs
         run: pnpm doc
       - name: Setup Pages

@@ -7,6 +7,7 @@
   "scripts": {
     "spec": "vitest run",
     "doc": "typedoc",
+    "build:all": "pnpm --filter core build && pnpm --filter react build",
     "lint:check": "eslint .",
     "type:check": "tsc --build ./tsconfig.typecheck.json --noEmit"
   },

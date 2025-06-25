@@ -21,6 +21,8 @@ jobs:
           cache: 'pnpm'
       - name: Install dependencies
         run: pnpm install
+      - name: Build libs
+        run: pnpm build:all
       - name: Build docs
         run: pnpm doc
   lintcheck:
@@ -39,6 +41,8 @@ jobs:
           cache: 'pnpm'
       - name: Install dependencies
         run: pnpm install
+      - name: Build libs
+        run: pnpm build:all
       - name: Lintcheck
         run: pnpm lint:check
   typecheck:
@@ -57,6 +61,8 @@ jobs:
           cache: 'pnpm'
       - name: Install dependencies
         run: pnpm install
+      - name: Build libs
+        run: pnpm build:all
       - name: Typecheck
         run: pnpm type:check
   spec:
@@ -75,5 +81,7 @@ jobs:
           cache: 'pnpm'
       - name: Install dependencies
         run: pnpm install
+      - name: Build libs
+        run: pnpm build:all
       - name: Spec
         run: pnpm spec
