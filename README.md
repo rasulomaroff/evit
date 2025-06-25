@@ -45,7 +45,7 @@ You can also install react bindings `@evit/react`.
 
 ---
 
-## 🔧 Example
+## Examples
 
 ```ts
 import { defineEvent, withPayload } from '@evit/core'
@@ -60,6 +60,29 @@ userCreated.on((payload, tag) => {
 
 // Trigger the event
 userCreated({ id: 123 })
+```
+
+With react hooks:
+
+```ts
+import { defineEvent, withPayload } from '@evit/core'
+import { useEventEffect } from '@evit/react'
+
+// Define an event with a payload
+const userCreated = defineEvent('user.created', withPayload<{ id: number }>())
+
+// Somewhere in other component/function event is triggered
+userCreated({ id: 123 })
+
+function MyComponent() {
+    // callback in this event effect will be called
+    useEventEffect(userCreated, (payload, tag) => {
+        console.log('User ID:', payload.id)
+    })
+
+    return null
+}
+
 ```
 
 ---
